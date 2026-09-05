@@ -37,6 +37,16 @@ Trust Ledger OS closes that gap by making every high-impact change reviewed, tra
 
 The 2-minute video plan and FFmpeg render command are in [`docs/TRUST_LEDGER_OS_VIDEO.md`](docs/TRUST_LEDGER_OS_VIDEO.md).
 
+Generated assets live in [`public/demo`](public/demo):
+
+- `trust-ledger-os-demo.mp4`
+- `01-hero-desktop.png`
+- `02-how-it-works.png`
+- `03-tool-stack.png`
+- `04-builderbase-fit.png`
+- `05-demo-deliverables.png`
+- `06-hero-mobile.png`
+
 ## Build
 
 ```bash
