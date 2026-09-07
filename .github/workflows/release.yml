@@ -1,0 +1,73 @@
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish packages after the build"
+        required: false
+        type: boolean
+        default: false
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Build Next app
+        run: npm run build
+
+      - name: Build npm package
+        run: ./node_modules/.bin/tsc -p packages/npm/tsconfig.json
+
+      - name: Build MCP package
+        run: ./node_modules/.bin/tsc -p packages/mcp/tsconfig.json
+
+      - name: Build Python package
+        run: |
+          python -m pip install --upgrade pip build twine
+          python -m build packages/python
+
+      - name: Publish npm packages
+        if: ${{ github.event_name == 'push' || inputs.publish }}
+        run: |
+          if [ -z "$NPM_TOKEN" ]; then
+            echo "NPM_TOKEN is not set; skipping npm publish";
+            exit 0;
+          fi
+          printf "//registry.npmjs.org/:_authToken=%s\n" "$NPM_TOKEN" > ~/.npmrc
+          npm publish packages/npm --access public
+          npm publish packages/mcp --access public
+
+      - name: Publish PyPI package
+        if: ${{ github.event_name == 'push' || inputs.publish }}
+        run: |
+          if [ -z "$PYPI_API_TOKEN" ]; then
+            echo "PYPI_API_TOKEN is not set; skipping PyPI publish";
+            exit 0;
+          fi
+          python -m twine upload -u __token__ -p "$PYPI_API_TOKEN" packages/python/dist/*

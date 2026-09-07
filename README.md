@@ -59,6 +59,15 @@ Mirrors:
 - Python CLI: `PYTHONPATH=packages/python/src python3 -m trust_ledger_os.cli --manifest`
 - Vercel Python entrypoint: `trust_ledger_os.vercel_app:app` from `packages/python`
 
+## Release Workflow
+
+- GitHub Actions workflow: `.github/workflows/release.yml`
+- Trigger it with a `v*` tag or `workflow_dispatch`
+- Required secrets for publish mode:
+  - `NPM_TOKEN`
+  - `PYPI_API_TOKEN`
+- The workflow builds the Next app, the npm and MCP packages, and the Python package before publishing.
+
 ## Demo Assets
 
 The 2-minute video plan and FFmpeg render command are in [`docs/TRUST_LEDGER_OS_VIDEO.md`](docs/TRUST_LEDGER_OS_VIDEO.md).
