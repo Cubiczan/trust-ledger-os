@@ -21,6 +21,29 @@ const steps = [
   'Store the decision in a ledger future runs can reuse.',
 ];
 
+const roadmap = [
+  {
+    phase: 'Phase 1',
+    title: 'Foundation kit',
+    text: 'Ship the shared agent glossary, model/tool matrix, and the when-to-use-an-agent decision tree.',
+  },
+  {
+    phase: 'Phase 2',
+    title: 'Framework benchmark',
+    text: 'Compare LangGraph, OpenAI Agents SDK, AutoGen, PydanticAI, and LlamaIndex on the same finance task.',
+  },
+  {
+    phase: 'Phase 3',
+    title: 'Research and reasoning',
+    text: 'Deliver the fundamental analysis pipeline, deep search flow, and reusable reasoning templates.',
+  },
+  {
+    phase: 'Phase 4',
+    title: 'Production controls',
+    text: 'Add eval harnesses, drift checks, tracing, guardrails, and human approval gates before release.',
+  },
+];
+
 export default function Page() {
   return (
     <main>
@@ -102,13 +125,38 @@ export default function Page() {
           </article>
 
           <article className="section span-4">
-            <h2>Demo deliverables</h2>
-            <ul className="list">
-              <li>2-minute FFmpeg video</li>
-              <li>PRISM trace view</li>
-              <li>Prelint review scene</li>
-              <li>Decision ledger screenshot</li>
-            </ul>
+            <h2>Implementation roadmap</h2>
+            <div className="timeline">
+              {roadmap.map((item) => (
+                <div className="step" key={item.phase}>
+                  <span>{item.phase.replace('Phase ', '')}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p style={{ marginTop: 14 }}>
+              <a href="/foundation" style={{ color: 'var(--accent)' }}>
+                Open the foundation scaffold
+              </a>
+            </p>
+            <p>
+              <a href="/framework-benchmark" style={{ color: 'var(--accent)' }}>
+                Open the framework benchmark scaffold
+              </a>
+            </p>
+            <p>
+              <a href="/research-reasoning" style={{ color: 'var(--accent)' }}>
+                Open the research and reasoning scaffold
+              </a>
+            </p>
+            <p>
+              <a href="/production-controls" style={{ color: 'var(--accent)' }}>
+                Open the production controls scaffold
+              </a>
+            </p>
           </article>
         </section>
 

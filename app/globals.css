@@ -207,6 +207,11 @@ h1 {
   font-weight: 700;
 }
 
+.step h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
 .footer {
   padding: 0 32px 32px;
   color: var(--muted);
