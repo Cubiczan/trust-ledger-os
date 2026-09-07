@@ -51,6 +51,14 @@ Mirrors:
 - `packages/python/`: PyPI-friendly manifest and catalog export.
 - `packages/mcp/`: MCP-ready tool and resource catalog.
 
+## Package Commands
+
+- npm package build: `npm --prefix packages/npm run build`
+- MCP package build: `npm --prefix packages/mcp run build`
+- MCP server run: `npm --prefix packages/mcp start`
+- Python CLI: `PYTHONPATH=packages/python/src python3 -m trust_ledger_os.cli --manifest`
+- Vercel Python entrypoint: `trust_ledger_os.vercel_app:app` from `packages/python`
+
 ## Demo Assets
 
 The 2-minute video plan and FFmpeg render command are in [`docs/TRUST_LEDGER_OS_VIDEO.md`](docs/TRUST_LEDGER_OS_VIDEO.md).

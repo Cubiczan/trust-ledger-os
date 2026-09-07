@@ -1,11 +1,27 @@
 {
   "name": "@cubiczan/trust-ledger-os",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "description": "TypeScript package surface for Trust Ledger OS manifest and phase catalog.",
-  "main": "src/index.ts",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
