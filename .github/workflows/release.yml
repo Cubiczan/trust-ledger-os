@@ -53,7 +53,7 @@ jobs:
           python -m build packages/python
 
       - name: Publish npm packages
-        if: ${{ github.event_name == 'push' || inputs.publish }}
+        if: ${{ github.repository == 'icohangar-ops/trust-ledger-os' && (github.event_name == 'push' || inputs.publish) }}
         run: |
           if [ -z "$NPM_TOKEN" ]; then
             echo "NPM_TOKEN is not set; skipping npm publish";
@@ -64,7 +64,7 @@ jobs:
           npm publish ./packages/mcp --access public
 
       - name: Publish PyPI package
-        if: ${{ github.event_name == 'push' || inputs.publish }}
+        if: ${{ github.repository == 'icohangar-ops/trust-ledger-os' && (github.event_name == 'push' || inputs.publish) }}
         run: |
           if [ -z "$PYPI_API_TOKEN" ]; then
             echo "PYPI_API_TOKEN is not set; skipping PyPI publish";
