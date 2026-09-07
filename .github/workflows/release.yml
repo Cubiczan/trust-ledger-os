@@ -44,8 +44,10 @@ jobs:
       - name: Build npm package
         run: ./node_modules/.bin/tsc -p packages/npm/tsconfig.json
 
-      - name: Build MCP package
-        run: ./node_modules/.bin/tsc -p packages/mcp/tsconfig.json
+      - name: Build and test MCP package
+        run: |
+          npm --prefix packages/mcp ci
+          npm --prefix packages/mcp test
 
       - name: Build Python package
         run: |
