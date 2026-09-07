@@ -54,15 +54,18 @@ Mirrors:
 
 - `packages/npm/`: npm-friendly manifest and catalog export, published as `@cubiczan/trust-ledger-os@0.1.2`.
 - `packages/python/`: PyPI-friendly manifest and catalog export, published as `trust-ledger-os==0.1.2`.
-- `packages/mcp/`: MCP-ready tool and resource catalog, published as `trust-ledger-os-mcp@0.1.2`.
+- `packages/mcp/`: MCP-ready tool and resource catalog, published as `trust-ledger-os-mcp@0.1.2`. Stdio for the Glama server listing; Streamable HTTP on a dedicated Vercel project (`trust-ledger-os-mcp`, Root Directory `packages/mcp`).
 
 ## Package Commands
 
 - npm package build: `npm --prefix packages/npm run build`
 - MCP package build: `npm --prefix packages/mcp run build`
-- MCP server run: `npm --prefix packages/mcp start`
+- MCP stdio server: `npm --prefix packages/mcp start`
+- MCP HTTP server: `npm --prefix packages/mcp run http`
+- MCP HTTP smoke: `npm --prefix packages/mcp run smoke:http`
 - Python CLI: `PYTHONPATH=packages/python/src python3 -m trust_ledger_os.cli --manifest`
 - Vercel Python entrypoint: `src.trust_ledger_os.vercel_app:app` from `packages/python`
+- Vercel MCP project: Root Directory `packages/mcp` (do not reuse the Python app)
 
 ## Release Workflow
 

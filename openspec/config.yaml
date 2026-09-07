@@ -1,0 +1,6 @@
+schema: spec-driven
+context: |
+  Trust Ledger OS is a trust and risk control plane. Distribution surfaces live
+  in packages/npm, packages/python, and packages/mcp. The Next.js app is the
+  public landing site. packages/python has its own Vercel project and is not
+  an MCP connector.
