@@ -2,6 +2,13 @@
 
 MCP-ready package surface for Trust Ledger OS.
 
+## Publish
+
+- Build: `npm --prefix packages/mcp run build`
+- Server run: `npm --prefix packages/mcp start`
+- Package name: `trust-ledger-os-mcp`
+- Release path: `.github/workflows/release.yml`
+
 ## Tool catalog
 
 - `list_phases`

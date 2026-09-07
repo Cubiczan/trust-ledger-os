@@ -2,6 +2,14 @@
 
 Python package surface for the Trust Ledger OS manifest.
 
+## Publish
+
+- Build: `python -m build packages/python`
+- CLI: `PYTHONPATH=packages/python/src python3 -m trust_ledger_os.cli --manifest`
+- Vercel entrypoint: `trust_ledger_os.vercel_app:app`
+- Package name: `trust-ledger-os`
+- Release path: `.github/workflows/release.yml`
+
 ## Modules
 
 - `trust_ledger_os.manifest`
