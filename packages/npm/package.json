@@ -1,0 +1,11 @@
+{
+  "name": "@cubiczan/trust-ledger-os",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript package surface for Trust Ledger OS manifest and phase catalog.",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

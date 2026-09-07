@@ -1,0 +1,11 @@
+{
+  "name": "trust-ledger-os-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP-ready package surface for Trust Ledger OS tools and resources.",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

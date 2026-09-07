@@ -45,6 +45,12 @@ Mirrors:
 - `research-reasoning-kit/`: research pipeline stages and reusable reasoning patterns.
 - `production-controls-kit/`: eval harness, drift monitoring, guardrails, and release gate scaffold.
 
+## Distribution Surfaces
+
+- `packages/npm/`: npm-friendly manifest and catalog export.
+- `packages/python/`: PyPI-friendly manifest and catalog export.
+- `packages/mcp/`: MCP-ready tool and resource catalog.
+
 ## Demo Assets
 
 The 2-minute video plan and FFmpeg render command are in [`docs/TRUST_LEDGER_OS_VIDEO.md`](docs/TRUST_LEDGER_OS_VIDEO.md).

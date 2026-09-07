@@ -31,3 +31,5 @@ Phase 2 is now scaffolded at `/framework-benchmark` with a package boundary in `
 Phase 3 is now scaffolded at `/research-reasoning` with a package boundary in `research-reasoning-kit/`.
 
 Phase 4 is now scaffolded at `/production-controls` with a package boundary in `production-controls-kit/`.
+
+Distribution surfaces are scaffolded in `packages/npm/`, `packages/python/`, and `packages/mcp/`.
