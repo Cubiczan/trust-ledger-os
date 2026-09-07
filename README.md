@@ -7,6 +7,11 @@ Trust Ledger OS is a trust and risk control plane for AI teams. Every high-impac
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![PRISMtrace](https://img.shields.io/badge/Observability-PRISMtrace-black)](https://blockconvey.com)
 
+[![Release Workflow](https://img.shields.io/github/actions/workflow/status/icohangar-ops/trust-ledger-os/release.yml?branch=main)](./.github/workflows/release.yml)
+[![npm package](https://img.shields.io/badge/npm-%40cubiczan%2Ftrust--ledger--os-CB3837?logo=npm&logoColor=white)](./packages/npm/README.md)
+[![PyPI package](https://img.shields.io/badge/PyPI-trust--ledger--os-3775A9?logo=pypi&logoColor=white)](./packages/python/README.md)
+[![MCP server](https://img.shields.io/badge/MCP-trust--ledger--os--mcp-111827)](./packages/mcp/README.md)
+
 ## Overview
 
 The repo combines a public landing page with four scaffolded implementation phases. The same roadmap is mirrored into reusable package boundaries so the app, docs, and future library work stay aligned.
