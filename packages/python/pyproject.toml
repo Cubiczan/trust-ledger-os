@@ -19,4 +19,4 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.vercel]
-entrypoint = "src.trust_ledger_os.vercel_app:app"
+entrypoint = "trust_ledger_os.vercel_app:app"
