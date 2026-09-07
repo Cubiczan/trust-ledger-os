@@ -62,7 +62,7 @@ Mirrors:
 - MCP package build: `npm --prefix packages/mcp run build`
 - MCP server run: `npm --prefix packages/mcp start`
 - Python CLI: `PYTHONPATH=packages/python/src python3 -m trust_ledger_os.cli --manifest`
-- Vercel Python entrypoint: `trust_ledger_os.vercel_app:app` from `packages/python`
+- Vercel Python entrypoint: `src.trust_ledger_os.vercel_app:app` from `packages/python`
 
 ## Release Workflow
 
