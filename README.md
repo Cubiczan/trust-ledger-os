@@ -52,9 +52,9 @@ Mirrors:
 
 ## Distribution Surfaces
 
-- `packages/npm/`: npm-friendly manifest and catalog export.
-- `packages/python/`: PyPI-friendly manifest and catalog export.
-- `packages/mcp/`: MCP-ready tool and resource catalog.
+- `packages/npm/`: npm-friendly manifest and catalog export, published as `@cubiczan/trust-ledger-os@0.1.2`.
+- `packages/python/`: PyPI-friendly manifest and catalog export, published as `trust-ledger-os==0.1.2`.
+- `packages/mcp/`: MCP-ready tool and resource catalog, published as `trust-ledger-os-mcp@0.1.2`.
 
 ## Package Commands
 

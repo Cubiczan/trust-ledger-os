@@ -2,6 +2,8 @@
 
 Python package surface for the Trust Ledger OS manifest.
 
+Published version: `trust-ledger-os==0.1.2`
+
 ## Publish
 
 - Build: `python -m build packages/python`

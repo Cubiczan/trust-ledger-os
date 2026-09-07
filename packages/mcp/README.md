@@ -2,6 +2,8 @@
 
 MCP-ready package surface for Trust Ledger OS.
 
+Published version: `trust-ledger-os-mcp@0.1.2`
+
 ## Publish
 
 - Build: `npm --prefix packages/mcp run build`
