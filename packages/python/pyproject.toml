@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "trust-ledger-os"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python package surface for Trust Ledger OS manifest and phase catalog."
 readme = "README.md"
 requires-python = ">=3.10"

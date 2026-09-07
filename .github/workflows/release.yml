@@ -60,8 +60,8 @@ jobs:
             exit 0;
           fi
           printf "//registry.npmjs.org/:_authToken=%s\n" "$NPM_TOKEN" > ~/.npmrc
-          npm publish packages/npm --access public
-          npm publish packages/mcp --access public
+          npm publish ./packages/npm --access public
+          npm publish ./packages/mcp --access public
 
       - name: Publish PyPI package
         if: ${{ github.event_name == 'push' || inputs.publish }}
