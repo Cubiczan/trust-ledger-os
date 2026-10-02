@@ -12,6 +12,16 @@ Trust Ledger OS is a trust and risk control plane for AI teams. Every high-impac
 [![PyPI package](https://img.shields.io/badge/PyPI-trust--ledger--os-3775A9?logo=pypi&logoColor=white)](./packages/python/README.md)
 [![MCP server](https://img.shields.io/badge/MCP-trust--ledger--os--mcp-111827)](./packages/mcp/README.md)
 
+<!-- product-screenshots:start -->
+## Product screenshots
+
+Trust Ledger OS desktop overview explaining the review workflow and its supporting tool stack.
+
+![trust-ledger-os product interface](public/demo/01-hero-desktop.png)
+
+Existing UI capture stored in this repository; displayed values may be demo or sample data.
+<!-- product-screenshots:end -->
+
 ## Overview
 
 The repo combines a public landing page with four scaffolded implementation phases. The same roadmap is mirrored into reusable package boundaries so the app, docs, and future library work stay aligned.
